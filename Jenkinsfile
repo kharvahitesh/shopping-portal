@@ -26,7 +26,6 @@ tools{
             steps{
                 echo 'this is the third job'
                 sh 'nmp run package'
-                sleep 7
             }
         }
     }
@@ -94,21 +93,18 @@ tools{
             steps{
                 echo 'this is the compile job'
                 sh 'npm install'
-                sleep 4
-            }
+             }
         }
         stage('test-app'){
             steps{
                 echo 'this is the test job'
                 sh 'npm test'
-                sleep 9
             }
         }
         stage('package-app'){
             steps{
                 echo 'this is the package job'
                 sh 'npm run package'
-                sleep 7
             }
         }
     }
